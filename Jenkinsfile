@@ -27,7 +27,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script{
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    dockerImage =  Shell Script -- docker build -t "$JD_IMAGE"
                 } 
             }
         }
